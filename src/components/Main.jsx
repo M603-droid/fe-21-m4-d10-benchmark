@@ -45,19 +45,20 @@ class SongLists extends Component {
         console.log('SongLists rendered again')
         // the render() method gets fired again everytime there's a change in its state or in its props
         return (
-            <div className="mt-3">
-                <p>Song selected: {this.props.selectedMovie}</p>
+            
+            <div>
+
                 {
                     this.state.SongLists && (
                         // I'm entering this portion of the JSX just when the fetch is completed
                         // so just when SongLists in the state is not null anymore
                         <div>
                             <Card>
-                                <Card.Img variant="top" src={this.state.data.cover_medium} />
+                                <Card.Img variant="top" src={this.state.SongLists.data.cover_medium} />
                                 <Card.Body>
-                                    <Card.Title>{this.state.data.title}</Card.Title>
+                                    <Card.Title>{this.state.SongLists.data.title}</Card.Title>
                                     <Card.Text>
-                                        {this.state.SongLists.imdbID}
+                                        Here are my songs
                                     </Card.Text>
                                 </Card.Body>
                             </Card>
